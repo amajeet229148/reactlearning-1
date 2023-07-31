@@ -1,7 +1,7 @@
 import Button from "../button/button";
 import "./product.css";
 const ProductCard = (props) => {
-  const { id, image, title, rating, price } = props.product; // destructring object
+  const { id, image, title, rating, price  } = props.product; // destructring object
   return (
     <div className="product">
       <div className="img-cont">
@@ -15,7 +15,7 @@ const ProductCard = (props) => {
         </div>
         <div className="footer">
           <span className="header m-5">RS.{price}</span>
-          <Button onClick={() => props.removeProduct(id)}>Add</Button>
+          <Button onClick={() => props.addProduct(id)}>Add</Button>
         </div>
       </div>
     </div>

@@ -6,6 +6,7 @@ const ProductContainer = () => {
   const [productList, setProductList] = useState([]); // original produc list rakhne
   const [filteredProduct, setFilterProduct] = useState([]); // filter proudct and render
   const [loading, setLoading] = useState(false);
+  const  [productCount , setProductCount] = useState(0);
 
   // mouting  componentDidMount()
   useEffect(() => {
@@ -21,11 +22,8 @@ const ProductContainer = () => {
     );
   }, []);
 
-  const removeProduct = (productId) => {
-    const filterProduct = productList?.filter(
-      (product) => product.id !== productId
-    );
-    setProductList(filterProduct);
+  const addProduct = (productId) => {
+    setProductCount(productCount+1)
   };
 
   if (loading) {
@@ -42,7 +40,7 @@ const ProductContainer = () => {
 
   return (
     <>
-      <Header onChange={searchHandler}  count  = {0}/>
+      <Header onChange={searchHandler}  count  = {productCount}/>
       <div className="p-container">
         {
           // Js  code
@@ -53,7 +51,7 @@ const ProductContainer = () => {
                   product={product}
                   key={index}
                   index={index}
-                  removeProduct={removeProduct}
+                  addProduct={addProduct}
                 />
               );
             })
