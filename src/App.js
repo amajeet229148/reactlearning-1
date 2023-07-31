@@ -6,6 +6,7 @@ import Home from "./home/home";
 import ProductContainer from "./produdctConatiner";
 import "./App.css";
 import Timer from "./class-component/Timer";
+import ErrorBoundary from "./class-component/error-boundary";
 
 // export function AppRoot() {
 //   return <h2>Hey My First React Line</h2>;
@@ -48,7 +49,11 @@ function AppRoot() {
       </select> */}
       {/* <Home /> */}
       {/* <ProductContainer /> */}
+      <ErrorBoundary>
       <Timer/>
+      <ProductContainer/>
+      </ErrorBoundary>
+
     </div>
   );
 }

@@ -3,6 +3,7 @@ import { Component, useEffect } from "react";
 class Timer extends Component {
     constructor(props) {
         super(props);
+    
         // all the initialization things you can do
         this.state = {
             timer: 0,
@@ -49,6 +50,8 @@ class Timer extends Component {
     componentDidUpdate(nextProps , nextState){  
         // USE OF THIS METHOD IS GENERALLY CALLING SIDE EFFECT ON UPDATING ANY STATE
         // API CALL   
+        const  obj = {};
+        console.log(obj.name.hello) //
         
          console.log('did update')
          if(nextState.timer+1 === this.state.timer) {
@@ -68,6 +71,9 @@ class Timer extends Component {
     }
 
     updateTimer() {
+        const  obj = {};
+
+  
      this.setState({timer:  this.state.timer+1} , ()=> {
     console.log('callback' ,this.state.name)
      })
@@ -75,6 +81,8 @@ class Timer extends Component {
     }
     render () {
         console.log(this.state.lastName)
+      
+
             return  (
                 <>
                 <div>This First  React Class Component {this.state.timer}</div>
