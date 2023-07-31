@@ -11,8 +11,10 @@ class Timer extends Component {
             lastName: 'Chimachom'
         }
     }
+    // deprcreated
     componentWillMount() {
         console.log('Component Will Mount') 
+        // only call once  , this call before loading component into dom it called before render
         // this also use for initilizing things
     }
 
@@ -22,6 +24,7 @@ class Timer extends Component {
 
     componentDidMount () {
         console.log('hey I am done') 
+        // it call only once and after comonent laoded into dom and after render method
 
         // once mounting is done  than it is calling 
         // useEffect(()=>{
@@ -47,14 +50,13 @@ class Timer extends Component {
         alert('calling api....')
     }
 
-    componentDidUpdate(nextProps , nextState){  
+    componentDidUpdate(prevProps , prevState){  
         // USE OF THIS METHOD IS GENERALLY CALLING SIDE EFFECT ON UPDATING ANY STATE
         // API CALL   
-        const  obj = {};
-        console.log(obj.name.hello) //
-        
+
+
          console.log('did update')
-         if(nextState.timer+1 === this.state.timer) {
+         if(prevState.timer+1 === this.state.timer) {
             this.callApi()
         }
 
