@@ -1,0 +1,39 @@
+.product {
+    display: flex;
+    max-height: 25rem;
+    min-height: 25rem;
+    background-color: white;
+    max-width: 15rem;
+    min-width: 15rem;
+    border-radius: 10px;
+    flex-direction: column;
+    box-shadow: -1px 3px 5px 12px rgb(239 231 231);
+}
+
+.img-cont {
+    height: 60%;
+    width:100%;
+}
+.sub-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.footer {
+    display: flex;
+    justify-content: space-between;
+}
+.header {
+    font-weight: bold;
+    font-size: 1rem;
+}
+.m-5 {
+    margin: 5px;
+}
+.text-l {
+    text-align: left;
+}
+.title {
+    color: rgb(128, 119, 134);
+    font-size: 12px;
+}
