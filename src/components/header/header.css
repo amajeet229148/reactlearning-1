@@ -1,0 +1,17 @@
+.header-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    border-bottom: 2px solid #cecede;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: white
+}
+
+.logo {
+    font-weight: 800;
+    ;
+    font-size: 24px;
+}

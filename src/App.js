@@ -5,6 +5,7 @@ import Button from "./components/button/button";
 import Home from "./home/home";
 import ProductContainer from "./produdctConatiner";
 import "./App.css";
+import Timer from "./class-component/Timer";
 
 // export function AppRoot() {
 //   return <h2>Hey My First React Line</h2>;
@@ -46,7 +47,8 @@ function AppRoot() {
         <option value="red">Red</option>
       </select> */}
       {/* <Home /> */}
-      <ProductContainer />
+      {/* <ProductContainer /> */}
+      <Timer/>
     </div>
   );
 }
