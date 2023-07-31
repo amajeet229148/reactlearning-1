@@ -50,8 +50,8 @@ function AppRoot() {
       {/* <Home /> */}
       {/* <ProductContainer /> */}
       <ErrorBoundary>
-      <Timer/>
-      {/* <ProductContainer/> */}
+      {/* <Timer/> */}
+      <ProductContainer/>
       </ErrorBoundary>
 
     </div>

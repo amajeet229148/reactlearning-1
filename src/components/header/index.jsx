@@ -22,6 +22,7 @@ const Header = (props) => {
       <div>
         <img src="" />
         <span>Cart</span>
+        <span className="cart-value">{props.count}</span>
       </div>
     </nav>
   );

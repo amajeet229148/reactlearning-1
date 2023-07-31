@@ -42,7 +42,7 @@ const ProductContainer = () => {
 
   return (
     <>
-      <Header onChange={searchHandler} />
+      <Header onChange={searchHandler}  count  = {0}/>
       <div className="p-container">
         {
           // Js  code
