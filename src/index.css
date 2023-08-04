@@ -21,3 +21,10 @@ code {
  position: absolute;
  top: 30%;
 }
+
+.drop-cont {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  margin-right: 60px;
+}
