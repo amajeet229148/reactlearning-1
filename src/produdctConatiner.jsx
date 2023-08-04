@@ -25,16 +25,17 @@ const ProductContainer = () => {
         .then((result) => {
           setProductList(result);
           setFilterProduct(result);
-          setLoading(false);
         })
         .catch(() => {
-          setLoading(false);
           setError(true);
+        })
+        .finally(() => {
+          setLoading(false);
         })
     );
   };
   useEffect(() => {
-    fetchProduct("asc");
+    fetchProduct("asc"); // first time call
   }, []);
 
   const addProduct = (productId) => {
@@ -47,7 +48,7 @@ const ProductContainer = () => {
   }, [sortValue]);
 
   if (loading) {
-    return <div>Loading......</div>;
+    return <div className="empty">Loading......</div>;
   }
 
   const searchHandler = (e) => {
