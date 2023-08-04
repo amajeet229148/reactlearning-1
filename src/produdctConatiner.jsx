@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import ProductCard from "./components/productcard";
 import Header from "./components/header";
+import EmptyScreen from "./components/empty-screen";
 
 const ProductContainer = () => {
   const [productList, setProductList] = useState([]); // original produc list rakhne
   const [filteredProduct, setFilterProduct] = useState([]); // filter proudct and render
   const [loading, setLoading] = useState(false);
-  const  [productCount , setProductCount] = useState(0);
+  const [productCount, setProductCount] = useState(0);
 
   // mouting  componentDidMount()
   useEffect(() => {
@@ -23,7 +24,7 @@ const ProductContainer = () => {
   }, []);
 
   const addProduct = (productId) => {
-    setProductCount(productCount+1)
+    setProductCount(productCount + 1);
   };
 
   if (loading) {
@@ -40,11 +41,11 @@ const ProductContainer = () => {
 
   return (
     <>
-      <Header onChange={searchHandler}  count  = {productCount}/>
+      <Header onChange={searchHandler} count={productCount} />
       <div className="p-container">
         {
           // Js  code
-          filteredProduct.length >= 1 &&
+          filteredProduct.length >= 1 && !loading ? (
             filteredProduct.map((product, index) => {
               return (
                 <ProductCard
@@ -55,6 +56,14 @@ const ProductContainer = () => {
                 />
               );
             })
+          ) : (
+            <div className="empty">
+              <EmptyScreen
+                title="No Data Found"
+                description="Please retry typing another value"
+              />
+            </div>
+          )
         }
       </div>
     </>
