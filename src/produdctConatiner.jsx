@@ -107,10 +107,10 @@ export default ProductContainer;
 
 // Props
 // state
-// Components
-// useEffect
-// useState
-// JSX
+// Components (in -progress)
+// useEffect (practise)
+// useState (practise)
+// JSX (preactise)
 // complex jsx writing
 // handilng empty screen
 // handling loading state
@@ -123,3 +123,23 @@ export default ProductContainer;
 // pre-updated virtual dom
 // setState async
 // why we should not update state directly
+
+// Controlled components
+// Uncontrolled components
+// Custom hooks
+// useMemo
+// useCallBack
+// Keys
+// Pure component
+// React Lazy
+// useRef
+// ForwardRef
+// one way binding
+// achive two way binding in react
+// Higher Order Component
+// MUI react
+// Tailwind
+// React portal
+// Context api
+// useContext
+// useReducer
