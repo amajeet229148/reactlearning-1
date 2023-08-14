@@ -8,11 +8,7 @@ import AppRoot from "./App";
 const mainEleMent = document.getElementById("main-root");
 
 const root = ReactDOM.createRoot(mainEleMent);
-root.render(
-  <React.StrictMode>
-    <AppRoot></AppRoot>
-  </React.StrictMode>
-);
+root.render(<React.StrictMode>{<AppRoot />}</React.StrictMode>);
 
 // components are nothing just a javascript function which return the jsx
 

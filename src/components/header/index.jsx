@@ -1,7 +1,13 @@
+import { useEffect } from "react";
 import Input from "../input";
 import "./header.css";
 
 const Header = (props) => {
+  useEffect(() => {
+    // alert("hEADER COMPONENT");
+    console.log("hEADER Component");
+  }, []);
+
   return (
     <nav className="header-container ">
       <div className="logo">Witviper</div>

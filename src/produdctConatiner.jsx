@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import ProductCard from "./components/productcard";
 import Header from "./components/header";
 import EmptyScreen from "./components/empty-screen";
@@ -11,8 +11,13 @@ const ProductContainer = () => {
   const [productCount, setProductCount] = useState(0);
   const [sortValue, setSortValue] = useState("asc");
   const [isError, setError] = useState(false);
-
+  const productData12 = [];
   // mouting  componentDidMount()
+
+  useEffect(() => {
+    // alert("ProDUCT cONTAINER Component");
+    console.log("Product Conatiner Component");
+  }, []);
 
   const fetchProduct = (sortKey) => {
     setLoading(true);
@@ -34,9 +39,6 @@ const ProductContainer = () => {
         })
     );
   };
-  useEffect(() => {
-    fetchProduct("asc"); // first time call
-  }, []);
 
   const addProduct = (productId) => {
     setProductCount(productCount + 1);
@@ -143,3 +145,6 @@ export default ProductContainer;
 // Context api
 // useContext
 // useReducer
+
+// const data = compareFunction(a, b);
+// a  can be nested array b can nested object , a can array b c

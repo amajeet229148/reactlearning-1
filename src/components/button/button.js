@@ -13,6 +13,8 @@ const Button = ({
 
   // component unmount
   useEffect(() => {
+    console.log("button component");
+    // alert("button component");
     return () => {
       // generally we do code cleanup here
       // removing unmecessary varibale , eventListener

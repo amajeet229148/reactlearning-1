@@ -1,6 +1,6 @@
 // this normal export
 
-import React, { useState } from "react"; // default export  ,normal export
+import React, { useEffect, useState } from "react"; // default export  ,normal export
 import Button from "./components/button/button";
 import Home from "./home/home";
 import ProductContainer from "./produdctConatiner";
@@ -18,6 +18,11 @@ function AppRoot() {
   // let message = "Hey I am writing the code in react.🥸";
 
   // my message is state variable'
+
+  useEffect(() => {
+    // alert("App Component");
+    console.log("App Component");
+  }, []);
 
   const [color, setColor] = useState("red");
   let [message, setMessage] = useState("Hey I am writing the code in react.🥸");
@@ -50,10 +55,9 @@ function AppRoot() {
       {/* <Home /> */}
       {/* <ProductContainer /> */}
       <ErrorBoundary>
-      {/* <Timer/> */}
-      <ProductContainer/>
+        {/* <Timer/> */}
+        <ProductContainer />
       </ErrorBoundary>
-
     </div>
   );
 }

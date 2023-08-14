@@ -1,7 +1,12 @@
+import { useEffect } from "react";
 import Button from "../button/button";
 import "./product.css";
 const ProductCard = (props) => {
-  const { id, image, title, rating, price  } = props.product; // destructring object
+  const { id, image, title, rating, price } = props.product; // destructring object
+  useEffect(() => {
+    // alert("Product Card COMPONENT");
+    console.log("Product card");
+  }, []);
   return (
     <div className="product">
       <div className="img-cont">
