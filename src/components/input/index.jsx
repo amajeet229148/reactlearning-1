@@ -1,8 +1,13 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./input.css";
 
 const Input = (props) => {
-  const { placeHolder, onChange, value } = props;
+  const { placeHolder, onChange } = props;
+  const [value, setValue] = useState("");
+  const onHandle = (e) => {
+    onChange(e);
+    setValue(e.target.value);
+  };
   useEffect(() => {
     // alert("Input COMPONENT");
     console.log("Input Component");
@@ -11,7 +16,7 @@ const Input = (props) => {
     <div>
       <input
         placeholder={placeHolder}
-        onChange={onChange}
+        onChange={onHandle}
         value={value}
         className="input"
       />

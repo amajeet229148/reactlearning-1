@@ -7,6 +7,7 @@ import ProductContainer from "./produdctConatiner";
 import "./App.css";
 import Timer from "./class-component/Timer";
 import ErrorBoundary from "./class-component/error-boundary";
+import Login from "./class-component/sign-in";
 
 // export function AppRoot() {
 //   return <h2>Hey My First React Line</h2>;
@@ -19,10 +20,10 @@ function AppRoot() {
 
   // my message is state variable'
 
-  useEffect(() => {
-    // alert("App Component");
-    console.log("App Component");
-  }, []);
+  // useEffect(() => {
+  //   // alert("App Component");
+  //   console.log("App Component");
+  // }, []);
 
   const [color, setColor] = useState("red");
   let [message, setMessage] = useState("Hey I am writing the code in react.🥸");
@@ -56,7 +57,8 @@ function AppRoot() {
       {/* <ProductContainer /> */}
       <ErrorBoundary>
         {/* <Timer/> */}
-        <ProductContainer />
+        {/* <ProductContainer /> */}
+        <Login />
       </ErrorBoundary>
     </div>
   );

@@ -2,6 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import ProductCard from "./components/productcard";
 import Header from "./components/header";
 import EmptyScreen from "./components/empty-screen";
+import dropdown from "./components/dropdown";
 import Dropdown from "./components/dropdown";
 
 const ProductContainer = () => {
@@ -54,6 +55,7 @@ const ProductContainer = () => {
   }
 
   const searchHandler = (e) => {
+    // Dropdown();
     const { value } = e.target; // destructring
     const searchResult = productList.filter((product) => {
       return product.title.toLowerCase().includes(value.toLowerCase());
@@ -62,7 +64,7 @@ const ProductContainer = () => {
   };
 
   const dropHandler = (e) => {
-    setSortValue(e?.target?.value?.toLowerCase());
+    setSortValue(e?.target?.value);
     // below line no 64 is equivalent to code 45
     // fetchProduct(e?.target?.value?.toLowerCase());
   };
